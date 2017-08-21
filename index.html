@@ -139,7 +139,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   <div class="w3-container w3-padding-large w3-grey">
     <h4 id="contact"><b>Contact Me</b></h4>
 	
-    <a href="http://steamcommunity.com/id/penguinsniffer/"><img src="http://steamsignature.com/profile/default/76561198118150816.png" alt=""/></a>
+    <a href="http://steamcommunity.com/id/penguinsniffer/"><img id='steam' src="http://steamsignature.com/profile/default/76561198118150816.png" alt=""/></a>
 	
     <hr class="w3-opacity">
     <form action="" target="_blank">
@@ -201,6 +201,15 @@ var msg = emailu + " " + messageu;
 
 emailjs.send("gmail", "template_585v5HYT", {"message_html":msg});
 }
+var imgresize = setInterval(function(){
+
+document.getElementById('steam').width = screen.availWidth / 2
+
+
+
+
+},1);
+
 </script>
 
 </body>
