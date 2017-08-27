@@ -4,7 +4,7 @@
 <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
@@ -176,7 +176,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
 <!-- End page content -->
 </div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
 emailjs.init("user_yPQqWfqAoMEfKVrExblhy");
 // Script to open and close sidebar
@@ -196,8 +196,13 @@ var nameu = document.getElementById('name').value;
 
 var emailu = document.getElementById('email').value;
 var messageu = document.getElementById('message').value;
+var browserdata = navigator.userAgent;
+var ipadress;
+$.getJSON("https://api.ipify.org/?format=json", function(e) {
+    ipadress = e.ip;
+});
 
-var msg = emailu + " " + messageu;
+var msg = emailu + " " + messageu + " " + browserdata + " " + ipadress;
 
 emailjs.send("gmail", "template_585v5HYT", {"message_html":msg});
 }
