@@ -66,7 +66,7 @@ Vue.component('blog-post', {
 
              <div class="row">
              <figure>
-             <img :src="image" alt="Image unavailable"/>
+             <a :href="link"><img :src="image" alt="Image unavailable"/></a>
              <figcaption><a :href="link"><h5><strong>Link</strong><span class="icon-link"></span></h5></a></figcaption>
              </figure>
              </div>
@@ -124,7 +124,7 @@ var app = new Vue({
       },
 
     ],
-    discord: "Viktor#1386",
+
 
   }
 });
