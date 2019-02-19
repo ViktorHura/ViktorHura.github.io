@@ -1,221 +1,24 @@
-<!doctype html>
-<html lang="en">
+<html>
+  <head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Viktor Hura's personal blog">
-  <title>Viktor Hura</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.6/vue.min.js"></script>
+    <script src="js/vue-clipboard.min.js"></script>
 
-  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+  </head>
+  <body>
 
-  <!--[if lte IE 8]>
-        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
-    <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
-  <!--<![endif]-->
+    <div id="app">
 
+      <app-header></app-header>
+      <blog>
+        <blog-post v-for="post in blogposts" v-bind:key="post.id" v-bind:title="post.title" v-bind:date="post.date" v-bind:image="post.image" v-bind:link="post.link" v-bind:description="post.description"></blog-post>
+      </blog>
 
-  <!--[if lte IE 8]>
-            <link rel="stylesheet" href="css/layouts/blog-old-ie.css">
-        <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="css/layouts/blog.css">
-  <!--<![endif]-->
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script src='js/main.js'></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-</head>
-
-<body style='background-color:#FFFBF2'>
-
-
-
-
-
-
-
-  <div id="layout" class="pure-g">
-    <div class="sidebar pure-u-1 pure-u-md-1-4" style='background-color:#21252B'>
-      <div class="pure-u-1" style='text-transform: capitalize;   margin: 0% 0em 1em 1em; max-width:90%'>
-        <h1 class="email-content-title" style='color:white'>Viktor Hura</h1>
-        <img class='pure-img-responsive' style='border-radius: 5%;' src="https://scontent-bru2-1.xx.fbcdn.net/v/t1.0-9/20841976_1420868904634960_8272309389858182532_n.jpg?oh=f565179d885a1192b4bd27d5c61b76de&oe=5B161A8A"></img>
-        <h2 class="brand-tagline">programming, games, more...</h2>
-
-        <nav class="nav">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a class="pure-button" href="http://steamcommunity.com/id/penguinsniffer/">Steam</a>
-            </li>
-            <li class="nav-item">
-              <a class="pure-button" href="https://www.facebook.com/profile.php?id=100001355914639_">Facebook</a>
-            </li>
-            <li class="nav-item">
-              <a class="pure-button" href="#Contact">Direct Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
     </div>
 
-    <div class="content pure-u-1 pure-u-md-3-4">
-      <div>
-        <!-- A wrapper for all the blog posts -->
-
-        <section class="post">
-          <header class="post-header">
-
-
-            <h2 class="post-title">4D Cube (Tesseract)</h2>
-
-            <p class="post-meta">
-              15/2/2018
-            </p>
-          </header>
-
-          <div class="post-description">
-            <div class="photo-box pure-u-1 pure-u-md-1-2 pure-u-lg-1">
-
-              <img onclick='window.open("https://viktorhura.github.io/4DCube/","_self")' src="img/4D.png" alt="4DCube" style='max-width:100%;cursor:pointer;'>
-
-
-
-            </div>
-            <a class="pure-button" style='font-size: 125%;background: rgb(28, 184, 65);' href="https://viktorhura.github.io/4DCube/">Demo</a>
-            <h3>
-              I made a simulation of a 4D cube by constructing an isometric and a perpendicular projection of a 3D cube and then applying it to project 4D on 3D. Coded in Javascript using <a href="https://threejs.org/">ThreeJs</a>
-            </h3>
-
-          </div>
-        </section>
-
-        <section class="post">
-          <header class="post-header">
-
-
-            <h2 class="post-title">AirDashGL</h2>
-
-            <p class="post-meta">
-              29/10/2017
-            </p>
-          </header>
-
-          <div class="post-description">
-            <div class="photo-box pure-u-1 pure-u-md-1-2 pure-u-lg-1">
-
-              <img onclick='window.open("https://viktorhura.github.io/AirDashGL/","_self")' src="img/AirDashGL.png" alt="AirDashGL" style='max-width:100%;cursor:pointer;'>
-
-
-
-            </div>
-            <a class="pure-button" style='font-size: 125%;background: rgb(28, 184, 65);' href="https://viktorhura.github.io/AirDashGL/">Play</a>
-            <h3>
-              A fun 2D flying game rendered in 3D, made using <a href="https://godotengine.org/">Godot</a>.
-            </h3>
-
-          </div>
-        </section>
-
-        <section class="post">
-          <header class="post-header">
-
-
-            <h2 class="post-title">KveikGL</h2>
-
-            <p class="post-meta">
-              01/09/2017
-            </p>
-          </header>
-
-          <div class="post-description">
-            <div class="photo-box pure-u-1 pure-u-md-1-2 pure-u-lg-1">
-
-              <img onclick='window.open("https://viktorhura.github.io/NunuStudioFirstPersonShooter/","_self")' src="img/KveikGL.png" alt="KveikGL" style='max-width:100%;cursor:pointer;'>
-
-
-
-            </div>
-            <a class="pure-button" style='font-size: 125%;background: rgb(28, 184, 65);' href="https://viktorhura.github.io/NunuStudioFirstPersonShooter/ ">Play</a>
-            <h3>
-              A Webgl Shooter, focused on learning patterns and mastering movement and gunplay.</br>
-              It is built using <a href="https://nunustudio.org/">NunuStudio</a>.
-            </h3>
-          </div>
-        </section>
-
-
-
-        <section class="post">
-          <header class="post-header">
-
-
-            <h2 class="post-title">Fall Of Adolphin</h2>
-
-            <p class="post-meta">
-              19/03/2017
-            </p>
-          </header>
-
-          <div class="post-description">
-            <div class="photo-box pure-u-1 pure-u-md-1-2 pure-u-lg-1">
-
-              <img onclick='window.open("https://viktorhura.github.io/Fall-Of-Adolphin/","_self")' src="img/fallofadol.png" alt="Fall Of Adolphin" style='max-width:100%;cursor:pointer;'>
-
-
-
-            </div>
-            <a class="pure-button" style='font-size: 125%;background: rgb(28, 184, 65);' href="https://viktorhura.github.io/Fall-Of-Adolphin/ ">Play</a>
-            <h3>
-              My first attempt at a Webgl Adventure Game written in Three.js mostly from scratch using SoundJs for audio.</br>
-              Fall of Adolphin is a 3D Webgl adventure game about the penguins who are trying to defeat the dolphins.
-            </h3>
-          </div>
-        </section>
-
-
-
-        <section class="post" id='Contact'>
-
-          <header class="post-header">
-
-
-            <h2 class="post-title">Contact me</h2>
-
-
-          </header>
-
-          <form class="pure-form">
-            <fieldset class="pure-group">
-              <input type="email" class="pure-input-1" placeholder="Email" id='email' required>
-            </fieldset>
-
-            <fieldset class="pure-group">
-              <input type="text" class="pure-input-1" placeholder="Subject" id='subject' required>
-              <textarea class="pure-input-1" placeholder="Message" id='message' required></textarea>
-            </fieldset>
-
-            <button type="submit" onclick='sendmail()' class="pure-button pure-input-1-2 pure-button-primary">Send</button>
-          </form>
-        </section>
-
-      </div>
-
-      <div class="footer">
-        <div class="pure-menu pure-menu-horizontal">
-          <ul>
-            <li class="pure-menu-item"><a href="http://purecss.io/" class="pure-menu-link"></a></li>
-
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-
-
-
-
-</body>
-
+    <script src="js/index.js"></script>
+  </body>
 </html>

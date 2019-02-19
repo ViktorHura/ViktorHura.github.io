@@ -1,0 +1,58 @@
+
+body {
+  background-color: #282C34;
+}
+
+header {
+
+--header-fore-color: #D7DAE0;
+--header-back-color: #21252B;
+--header-border-color: #4F545E;
+--header-hover-back-color: #282C34;
+
+}
+
+@media screen and (max-width: 420px){
+    header{
+      --header-fore-color: #D7DAE0;
+      --header-back-color: #21252B;
+      --header-border-color: #4F545E;
+      --header-hover-back-color: #282C34;
+      padding-bottom: 7vw;
+    }
+}
+
+.header-modal {
+  --card-fore-color: #D7DAE0;
+  --card-back-color: #282C34;
+  --card-border-color: #4F545E;
+}
+
+.blog-column {
+  background-color:#DEE7F2;
+  --footer-border-color: #DEE7F2;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #D7DAE0;
+  width: 5px;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
