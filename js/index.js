@@ -92,7 +92,7 @@ var app = new Vue({
         description: `
         This is a java program that uses my <a href="https://github.com/ViktorHura/mlpnet-ga-java">simple multilayer perceptron neural network</a>, together with a genetic algorithm to learn to play the game of snake.</br></br>
 
-        The game runs on OpenGl using bindings prodived by <a href="https://www.lwjgl.org/">lwjgl</a> library.</br></br>
+        The game runs on OpenGl using bindings provided by <a href="https://www.lwjgl.org/">lwjgl</a> library.</br></br>
 
         The network has 12 input nodes, 13 hidden nodes and 4 outputs.</br></br>
 
@@ -110,9 +110,9 @@ var app = new Vue({
 
         I decided to have the first 4 apples in the game spawn in fixed position as to aid the snakes to get on their feet. This also means that the best fitness score doesn't drop after each generation.</br></br>
 
-        But when the snakes have learnt to eat the first 4 apples, then the apples spawn random like in the real game. This makes it so that the same snake might get different fitness scores in different generations.</br></br>
+        But when the snakes have learned to eat the first 4 apples, then the apples spawn random like in the real game. This makes it so that the same snake might get different fitness scores in different generations.</br></br>
 
-        I couldn't cope with the random nature of this game at first. But I have learnt that even tho the snakes might be leapfrogging each other in terms of highest fitness, I have observed that the average fitness still rises from one generation to the next.</br></br>
+        I couldn't cope with the random nature of this game at first. But I have learned that even tho the snakes might be leapfrogging each other in terms of highest fitness, I have observed that the average fitness still rises from one generation to the next.</br></br>
 
         I am happy with the results I got considering the simple architecture of my neural network and the limited inputs that my snakes get.</br></br>
 
