@@ -87,9 +87,10 @@ var app = new Vue({
         id: 10,
         title: 'Playing snake using neural network and genetic algorithm',
         date: '22/7/2019',
-        image: "img/Snake-evolver.png",
+        image: "img/snake.gif",
         link: "https://github.com/ViktorHura/snake-evolver-mlp-net-ga-java",
         description: `
+        <img src="img/Snake-evolver.png" alt="Image unavailable"/>
         This is a java program that uses my <a href="https://github.com/ViktorHura/mlpnet-ga-java">simple multilayer perceptron neural network</a>, together with a genetic algorithm to learn to play the game of snake.</br></br>
 
         The game runs on OpenGl using bindings provided by <a href="https://www.lwjgl.org/">lwjgl</a> library.</br></br>
