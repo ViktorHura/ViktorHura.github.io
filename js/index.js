@@ -71,7 +71,59 @@ Vue.component('blog-post', {
 var app = new Vue({
   el: '#app',
   data: {
-    blogposts: [{
+    blogposts: [
+      {
+        id: 11,
+        title: 'Multilayer Perceptron Network using Genetic Algorithms in C#, or mlpnet-ga-cs abbreviated',
+        date: '28/7/2019',
+        image: "img/Mlpnet-ga-cs.png",
+        link: "https://github.com/ViktorHura/mlpnet-ga-cs",
+        description: `
+                        A 3 layer MLP Network, using Genetic Algorithm as a trainer, to solve XOR problem</br>
+                        I first wrote this program in golang, now rewrote it to learn C#. <a href="#17/4/2019">Original Go version</a>
+                        `
+      },
+      {
+        id: 10,
+        title: 'Playing snake using neural network and genetic algorithm',
+        date: '22/7/2019',
+        image: "img/Snake-evolver.png",
+        link: "https://github.com/ViktorHura/snake-evolver-mlp-net-ga-java",
+        description: `
+        This is a java program that uses my <a href="https://github.com/ViktorHura/mlpnet-ga-java">simple multilayer perceptron neural network</a>, together with a genetic algorithm to learn to play the game of snake.</br></br>
+
+        The game runs on OpenGl using bindings prodived by <a href="https://www.lwjgl.org/">lwjgl</a> library.</br></br>
+
+        The network has 12 input nodes, 13 hidden nodes and 4 outputs.</br></br>
+
+        The first 4 inputs tell the snake if there is a wall or a tail(1 blocked, 0 clear) in the 4 blocks next to the snake's head.</br></br>
+
+        The second 4 inputs tell the snake which direction it is moving. Only one of them can be 1, the others will be 0.</br></br>
+
+        The final 4 inputs tell the snake the the direction in which the apple is:
+        above? under? left? right?
+        Usually 2 of them are 1 at once.</br></br>
+
+        The 4 outputs correspond to the 4 arrow keys that you would use in a normal game of snake.</br></br>
+
+        The genetic algorithm is identical to the one I used in my previous projects but with a slight change.</br></br>
+
+        I decided to have the first 4 apples in the game spawn in fixed position as to aid the snakes to get on their feet. This also means that the best fitness score doesn't drop after each generation.</br></br>
+
+        But when the snakes have learnt to eat the first 4 apples, then the apples spawn random like in the real game. This makes it so that the same snake might get different fitness scores in different generations.</br></br>
+
+        I couldn't cope with the random nature of this game at first. But I have learnt that even tho the snakes might be leapfrogging each other in terms of highest fitness, I have observed that the average fitness still rises from one generation to the next.</br></br>
+
+        I am happy with the results I got considering the simple architecture of my neural network and the limited inputs that my snakes get.</br></br>
+
+        In the future I might try to give the snakes a more complex vision and use a more complex neural network.</br></br>
+
+        <h3>Binaries</h3>
+
+        I have compiled a fat jar for windows together with the jre which you can find <a href="https://github.com/ViktorHura/snake-evolver-mlp-net-ga-java/releases">here</a></br></br>
+                        `
+      },
+      {
         id: 9,
         title: 'Multilayer Perceptron Network using Genetic Algorithms in Java, or mlpnet-ga-java abbreviated',
         date: '9/7/2019',
