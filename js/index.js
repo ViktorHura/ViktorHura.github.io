@@ -59,7 +59,7 @@ Vue.component('blog-post', {
 
              <div class="row">
              <h6 class="responsive-padding">
-             <span v-html="description"></span>
+             <span><p v-html="description"></p></span>
              </h6>
              </div>
 
@@ -72,6 +72,21 @@ var app = new Vue({
   el: '#app',
   data: {
     blogposts: [
+      {
+        id: 12,
+        title: 'Simple cpu raytracer',
+        date: '25/8/2019',
+        image: "img/Raytracer.png",
+        link: "https://github.com/ViktorHura/simple-cpu-raytracer-cs",
+        description: `
+
+        I decided to write a simple raytracer from scratch. I was heavily inspired by Eric Haines&#39;s mini-book <a href="https://github.com/RayTracing/InOneWeekend">Ray Tracing in One Weekend</a> and the helpful explanation of the algorithm by <a href="https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-ray-tracing/raytracing-algorithm-in-a-nutshell">Scatchapixel</a>.</br></br>
+        The program will divide the image into slices and distribute the rendering between the given amount of threads.</br>
+        The resolution of the image and sampling rate can be set but the image is always in the 4:3 aspect ratio.</br></br>
+        Compiled binaries are available <a href="https://github.com/ViktorHura/simple-cpu-raytracer-cs/releases">here</a></br>
+        If you wish the change the scene or camera properties then you can do that in the main function of program.cs, everything there should be self explanatory.</br>
+                        `
+      },
       {
         id: 11,
         title: 'Multilayer Perceptron Network using Genetic Algorithms in C#, or mlpnet-ga-cs abbreviated',
@@ -90,7 +105,7 @@ var app = new Vue({
         image: "img/snake.gif",
         link: "https://github.com/ViktorHura/snake-evolver-mlp-net-ga-java",
         description: `
-        <img src="img/Snake-evolver.png" alt="Image unavailable"/>
+        <img src="img/Snake-evolver.png" alt="Image unavailable"/></br></br>
         This is a java program that uses my <a href="https://github.com/ViktorHura/mlpnet-ga-java">simple multilayer perceptron neural network</a>, together with a genetic algorithm to learn to play the game of snake.</br></br>
 
         The game runs on OpenGl using bindings provided by <a href="https://www.lwjgl.org/">lwjgl</a> library.</br></br>
